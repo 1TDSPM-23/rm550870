@@ -27,9 +27,9 @@ const resultadoDasOperacoes = (visor) =>{
     
         //Verificando o penúltimo caractere do visor utilizando o atributo length
         if(visor.value[visor.value.length] == "+" || visor.value[visor.value.length] == "-" || visor.value[visor.value.length] == "*" || visor.value[visor.value.length] == "/"){
-            visor.value.pop();
+            visor.value = visor.value.slice(visor.value.length-1);
         }else{
-            visor.value.shift();
+            visor.value = visor.value.slice(1);
         }
 
     }
